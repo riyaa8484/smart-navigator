@@ -1424,3 +1424,17 @@ body {
 :root[data-theme="dark"] .location-dropdown li:hover * {
   color: #F1EEE8 !important;
 }
+
+/* Fix primary button colors in dark theme */
+:root[data-theme="dark"] .floating-planner #btn-calculate-route,
+:root[data-theme="dark"] .map-container > .floating-summary .summary-view-steps {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  border-color: var(--color-primary);
+}
+
+:root[data-theme="dark"] .floating-planner #btn-calculate-route:hover,
+:root[data-theme="dark"] .map-container > .floating-summary .summary-view-steps:hover {
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
