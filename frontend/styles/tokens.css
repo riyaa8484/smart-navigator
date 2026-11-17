@@ -1,0 +1,175 @@
+/**
+ * Smart Campus Map Navigator - Design Tokens (tokens.css)
+ * Meets WCAG 2.2 AA Contrast Requirements (>= 4.5:1 for normal text, >= 3:1 for UI elements)
+ * Provides 3 accessible color themes + Full Dark Mode support.
+ */
+
+:root {
+  /* =========================================================================
+     1. Color Palette: Subtle & Professional (Slate & Deep Royal Indigo)
+     ========================================================================= */
+  --color-primary: #2563EB;          /* Professional Royal Blue (WCAG AA compliant) */
+  --color-primary-hover: #1D4ED8;
+  --color-primary-light: #F0F4FA;    /* Subtle soft tint for active states */
+  --color-secondary: #0F766E;        /* Subtle Deep Teal */
+  --color-secondary-hover: #115E59;
+  --color-secondary-light: #F0FDFA;
+  --color-accent-peach: #FFD2BD; /* Warm peach (primary action) */
+  --color-accent-coral: #F5BDA7; /* Soft coral (secondary accent) */           /* Neutral Slate Accent */
+  --color-accent-hover: #334155;
+
+  /* Neutrals & Surfaces - Clean & Sophisticated */
+  --color-bg: #F8FAFC;              /* Clean Slate-50 background */
+  --color-surface: #FFFFFF;         /* Pure white surface */
+  --color-surface-elevated: #F1F5F9;/* Soft elevated background */
+  --color-border: #CBD5E1;          /* Subtle neutral border */
+  --color-border-subtle: #E2E8F0;   /* Very light divider */
+
+  /* Typography Colors */
+  --color-text-main: #0F172A;       /* Slate-900 (High contrast >= 14:1) */
+  --color-text-muted: #475569;      /* Slate-600 (Accessible >= 5.8:1) */
+  --color-text-inverse: #FFFFFF;
+
+  /* Semantic Feedback Colors - Subtle & Refined */
+  --color-error: #DC2626;           /* Subtle Crimson */
+  --color-error-bg: #FEF2F2;
+  --color-success: #15803D;         /* Balanced Forest Green */
+  --color-success-bg: #F0FDF4;
+  --color-warning: #B45309;         /* Amber/Gold */
+  --color-warning-bg: #FFFBEB;
+  --color-info: #0369A1;            /* Slate Blue */
+  --color-info-bg: #F0F9FF;
+
+  /* Route Specific Colors */
+  --route-primary: #2563EB;         /* Royal Blue */
+  --route-alt: #475569;             /* Slate Grey */
+  --route-facility: #B91C1C;        /* Waypoint Red */
+  --route-walking: #0F766E;         /* Walking Teal */
+
+  /* =========================================================================
+     2. Typography Scale
+     ========================================================================= */
+  --font-family: 'Public Sans', 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --font-mono: "Fira Code", Consolas, "Courier New", monospace;
+
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-md: 1.125rem;   /* 18px */
+  --font-size-lg: 1.25rem;    /* 20px */
+  --font-size-xl: 1.5rem;     /* 24px */
+  --font-size-2xl: 2rem;      /* 32px */
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-heading: 1.25;
+  --line-height-body: 1.55;
+
+  /* =========================================================================
+     3. Spacing Scale (Rhythm & Layout)
+     ========================================================================= */
+  --space-2xs: 2px;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* =========================================================================
+     4. Shape & Elevation Tokens (Rounded Rectangle Controls)
+     ========================================================================= */
+  --radius-xs: 6px;
+  --radius-sm: 8px;                 /* Rounded rectangle buttons */
+  --radius-md: 12px;                /* Cards & modals */
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.06), 0 1px 2px -1px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+  --shadow-float: 0 20px 25px -5px rgba(15, 23, 42, 0.12), 0 8px 10px -6px rgba(15, 23, 42, 0.06);
+
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.25s ease-in-out;
+
+  /* Focus Indicator for Accessibility (WCAG 2.4.7) */
+  --focus-ring: 3px solid rgba(37, 99, 235, 0.35);
+
+  /* Layout Breakpoints (for reference in CSS media queries) */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+
+  /* Layering Z-Index */
+  --z-map: 1;
+  --z-sidebar: 10;
+  --z-header: 20;
+  --z-modal: 50;
+  --z-toast: 100;
+}
+
+/* =========================================================================
+   Theme B: Navy - Amber / Orange (High Clarity)
+   ========================================================================= */
+[data-palette="theme-b"] {
+  --color-primary: #15538A;
+  --color-primary-hover: #0F3E68;
+  --color-primary-light: #EBF4FC;
+  --color-secondary: #B45309;
+  --color-secondary-hover: #92400E;
+  --color-secondary-light: #FEF3C7;
+  --color-accent: #EA580C;
+  --color-accent-hover: #C2410C;
+  --route-primary: #15538A;
+  --route-alt: #EA580C;
+  --focus-ring: 3px solid rgba(21, 83, 138, 0.5);
+}
+
+/* =========================================================================
+   Theme C: Purple - Teal (Modern Tech Aesthetic)
+   ========================================================================= */
+[data-palette="theme-c"] {
+  --color-primary: #6D28D9;
+  --color-primary-hover: #5B21B6;
+  --color-primary-light: #F5F3FF;
+  --color-secondary: #0D9488;
+  --color-secondary-hover: #0F766E;
+  --color-secondary-light: #F0FDFA;
+  --color-accent: #F59E0B;
+  --color-accent-hover: #D97706;
+  --route-primary: #6D28D9;
+  --route-alt: #0D9488;
+  --focus-ring: 3px solid rgba(109, 40, 217, 0.5);
+}
+
+/* =========================================================================
+   Dark Mode Overrides ([data-theme="dark"])
+   Preserves high contrast (text >= 4.5:1 on dark surfaces)
+   ========================================================================= */
+[data-theme="dark"] {
+  --color-bg: #0B0D12;
+  --color-surface: #11151D;
+  --color-surface-elevated: #191E28;
+  --color-surface-2: #202735;
+  --color-border: #303846;
+  --color-border-subtle: #303846;
+  --color-text-main: #F1EEE8;
+  --color-text-muted: #A5ACB8;
+  --color-primary: #D17B70;
+  --color-primary-hover: #C46D64;
+  --color-primary-light: rgba(209, 123, 112, 0.16);
+  --color-secondary: #E9E3D8;
+  --color-secondary-light: rgba(233, 227, 216, 0.15);
+  --color-on-primary: #253329;
+  --route-primary: #E9E3D8;
+  --route-alt: #C9B99D;
+  --color-accent-coral: #D17B70;
+  --color-accent-peach: #E9E3D8;
+  --color-accent-hover: #C46D64;
+  --focus-ring: 3px solid rgba(209, 123, 112, 0.38);
+}

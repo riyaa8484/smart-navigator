@@ -1,0 +1,251 @@
+{
+  "campus_name": "Smart University Tech Campus",
+  "center": [
+    28.6885,
+    77.12
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "code": "MainGate",
+      "name": "Main Entrance Gate",
+      "category": "gate",
+      "coords": [
+        28.685,
+        77.115
+      ],
+      "description": "Primary vehicle and pedestrian entrance"
+    },
+    {
+      "id": 2,
+      "code": "AdminBlock",
+      "name": "Administrative Block",
+      "category": "admin",
+      "coords": [
+        28.6865,
+        77.1165
+      ],
+      "description": "Dean's office, registrar, and visitor reception"
+    },
+    {
+      "id": 3,
+      "code": "Library",
+      "name": "Central Library",
+      "category": "academic",
+      "coords": [
+        28.688,
+        77.118
+      ],
+      "description": "3-storey central repository with reading halls and labs"
+    },
+    {
+      "id": 4,
+      "code": "CSDepartment",
+      "name": "Computer Science Department",
+      "category": "academic",
+      "coords": [
+        28.6895,
+        77.1195
+      ],
+      "description": "AI, DSA, and Software Engineering Laboratories"
+    },
+    {
+      "id": 5,
+      "code": "Auditorium",
+      "name": "Grand Auditorium",
+      "category": "event",
+      "coords": [
+        28.6875,
+        77.1215
+      ],
+      "description": "1500-seat university event and seminar auditorium"
+    },
+    {
+      "id": 6,
+      "code": "Canteen",
+      "name": "Student Central Canteen",
+      "category": "food",
+      "coords": [
+        28.69,
+        77.122
+      ],
+      "description": "Cafeteria, food court, and recreation space"
+    },
+    {
+      "id": 7,
+      "code": "HostelA",
+      "name": "Boys Hostel Block A",
+      "category": "hostel",
+      "coords": [
+        28.692,
+        77.1235
+      ],
+      "description": "Undergraduate student residence block"
+    },
+    {
+      "id": 8,
+      "code": "HostelB",
+      "name": "Girls Hostel Block B",
+      "category": "hostel",
+      "coords": [
+        28.6915,
+        77.117
+      ],
+      "description": "Secure resident halls for female students"
+    },
+    {
+      "id": 9,
+      "code": "SportsComplex",
+      "name": "University Sports Complex",
+      "category": "sports",
+      "coords": [
+        28.686,
+        77.124
+      ],
+      "description": "Athletic track, gymnasium, and indoor badminton arena"
+    },
+    {
+      "id": 10,
+      "code": "HealthCenter",
+      "name": "Campus Medical & Health Centre",
+      "category": "medical",
+      "coords": [
+        28.687,
+        77.119
+      ],
+      "description": "24/7 First aid, doctor consultation, and pharmacy"
+    },
+    {
+      "id": 11,
+      "code": "SecurityPost",
+      "name": "North Campus Security Post",
+      "category": "security",
+      "coords": [
+        28.693,
+        77.1205
+      ],
+      "description": "Campus patrol desk and emergency call station"
+    },
+    {
+      "id": 12,
+      "code": "InnovationHub",
+      "name": "Technology Incubation Hub",
+      "category": "research",
+      "coords": [
+        28.6905,
+        77.125
+      ],
+      "description": "Startup workspace and maker laboratories"
+    }
+  ],
+  "edges": [
+    {
+      "source": "MainGate",
+      "target": "AdminBlock",
+      "weight": 0.25,
+      "mode": "both"
+    },
+    {
+      "source": "MainGate",
+      "target": "HostelB",
+      "weight": 0.75,
+      "mode": "both"
+    },
+    {
+      "source": "AdminBlock",
+      "target": "HealthCenter",
+      "weight": 0.3,
+      "mode": "walking"
+    },
+    {
+      "source": "AdminBlock",
+      "target": "Library",
+      "weight": 0.35,
+      "mode": "both"
+    },
+    {
+      "source": "Library",
+      "target": "HealthCenter",
+      "weight": 0.15,
+      "mode": "walking"
+    },
+    {
+      "source": "Library",
+      "target": "CSDepartment",
+      "weight": 0.25,
+      "mode": "both"
+    },
+    {
+      "source": "Library",
+      "target": "Auditorium",
+      "weight": 0.38,
+      "mode": "both"
+    },
+    {
+      "source": "CSDepartment",
+      "target": "Canteen",
+      "weight": 0.28,
+      "mode": "both"
+    },
+    {
+      "source": "CSDepartment",
+      "target": "HostelB",
+      "weight": 0.35,
+      "mode": "walking"
+    },
+    {
+      "source": "CSDepartment",
+      "target": "SecurityPost",
+      "weight": 0.45,
+      "mode": "both"
+    },
+    {
+      "source": "Auditorium",
+      "target": "SportsComplex",
+      "weight": 0.3,
+      "mode": "both"
+    },
+    {
+      "source": "Auditorium",
+      "target": "Canteen",
+      "weight": 0.32,
+      "mode": "walking"
+    },
+    {
+      "source": "Canteen",
+      "target": "HostelA",
+      "weight": 0.26,
+      "mode": "both"
+    },
+    {
+      "source": "Canteen",
+      "target": "InnovationHub",
+      "weight": 0.33,
+      "mode": "both"
+    },
+    {
+      "source": "HostelA",
+      "target": "InnovationHub",
+      "weight": 0.22,
+      "mode": "walking"
+    },
+    {
+      "source": "HostelA",
+      "target": "SecurityPost",
+      "weight": 0.34,
+      "mode": "both"
+    },
+    {
+      "source": "HostelB",
+      "target": "SecurityPost",
+      "weight": 0.4,
+      "mode": "walking"
+    },
+    {
+      "source": "SportsComplex",
+      "target": "InnovationHub",
+      "weight": 0.55,
+      "mode": "both"
+    }
+  ]
+}
